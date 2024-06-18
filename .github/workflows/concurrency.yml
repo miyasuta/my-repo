@@ -5,7 +5,8 @@ jobs:
   sleep:
     runs-on: ubuntu-latest
     env:
-      GITHUB_WORFLOW: ${{ github.workflow }}
+      GITHUB_WORKFLOW: ${{ github.workflow }}
       GITHUB_REF: ${{ github.ref }}
     steps:
+      - run: echo "${GITHUB_WORKFLOW}, ${GITHUB_REF}"
       - run: sleep 120
